@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سوق الدواء السوداني</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="auth-screen" class="auth-container">
+<div class="auth-card">
+<h1>سوق الدواء السوداني</h1>
+<div class="lang-toggle">
+<button onclick="changeLanguage('ar')">العربية</button>
+<button onclick="changeLanguage('en')">English</button>
+</div>
+
+<div id="login-section">
+<input type="email" id="emailInput" placeholder="البريد الإلكتروني / Email">
+<button class="btn-primary" onclick="showVerify()">إرسال رمز التأكيد</button>
+</div>
+
+<div id="verify-section" style="display:none;">
+<p id="verify-text">أدخل الرمز المكون من 6 أرقام</p>
+<input type="text" id="otpInput" maxlength="6" placeholder="000000" style="text-align:center; letter-spacing: 5px;">
+<button class="btn-primary" onclick="enterApp()">تأكيد الدخول</button>
+</div>
+</div>
+</div>
+
+<div id="main-app" style="display:none;">
+<div id="page-content">
+</div>
+
+<nav class="bottom-nav" id="main-nav"></nav>
+</div>
+
+<script src="logic.js"></script>
+<script src="home.js"></script>
+<script src="profile.js"></script>
+<script src="notifications.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>
+
